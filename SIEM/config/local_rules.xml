@@ -1,0 +1,39 @@
+<group name="local,windows,mitre_custom,">
+
+  <!-- Rule 100001: Wyczyszczenie dziennika zdarzeń Security (Event ID 1102) -->
+  <rule id="100001" level="12">
+    <if_group>windows</if_group>
+    <field name="win.system.eventID">^1102$</field>
+    <description>Windows Security Audit Log was cleared (Event ID 1102).</description>
+    <mitre>
+      <id>T1070.001</id>
+    </mitre>
+    <group>log_cleared,pci_dss_10.6.1,</group>
+  </rule>
+
+  <!-- Rule 100002: Dodanie użytkownika do lokalnej grupy Administratorów (Event ID 4732) -->
+  <rule id="100002" level="12">
+    <if_group>windows</if_group>
+    <field name="win.system.eventID">^4732$</field>
+    <field name="win.eventdata.targetUserName" type="pcre2">(?i)(Administrators|Administratorzy|S-1-5-32-544)</field>
+    <description>User added to local Administrators group (Event ID 4732).</description>
+    <mitre>
+      <id>T1098</id>
+      <id>T1078.003</id>
+    </mitre>
+    <group>account_changed,win_group_changed,</group>
+  </rule>
+
+  <!-- Rule 100003: Uruchomienie zakodowanego polecenia PowerShell (-EncodedCommand / -enc) -->
+  <rule id="100003" level="10">
+    <if_group>windows</if_group>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)powershell(?:\.exe)?\s+.*-(?:e|en|enc|enco|encod|encode|encoded|encodedcommand)\s+[A-Za-z0-9+/=]{16,}</field>
+    <description>Encoded PowerShell command execution detected.</description>
+    <mitre>
+      <id>T1059.001</id>
+      <id>T1027</id>
+    </mitre>
+    <group>powershell_encoded,attack,</group>
+  </rule>
+
+</group>
