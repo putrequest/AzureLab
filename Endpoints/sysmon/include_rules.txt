@@ -1,0 +1,69 @@
+# ==========================================
+# EVENT ID 1 - PROCESS CREATION
+# ==========================================
+
+1_process_creation\include_living_off_the_land.xml
+1_process_creation\include_shells.xml
+1_process_creation\include_windows_remote_management.xml
+1_process_creation\include_windows_defender_tampering.xml
+
+# ==========================================
+# EVENT ID 2 - FILE CREATION TIME
+# ==========================================
+
+2_file_create_time\include_executables.xml
+2_file_create_time\include_temp_folder.xml
+
+# ==========================================
+# EVENT ID 3 - NETWORK CONNECTIONS
+# ==========================================
+
+3_network_connection_initiated\include_native_windows_tools.xml
+3_network_connection_initiated\include_ports_proxies.xml
+
+# ==========================================
+# EVENT ID 10 - PROCESS ACCESS
+# ==========================================
+
+#10_process_access\include_suspicious_powershell.xml
+#10_process_access\include_suspicious_locations.xml
+
+# ==========================================
+# EVENT ID 11 - FILE CREATION
+# ==========================================
+
+11_file_create\include_executables.xml
+11_file_create\include_powershell_scripts.xml
+11_file_create\include_python_scripts.xml
+
+# ==========================================
+# EVENT ID 12, 13, 14 - REGISTRY
+# ==========================================
+
+12_13_14_registry_event\include_autoruns_and_startup_keys.xml
+12_13_14_registry_event\include_services.xml
+
+# ==========================================
+# EVENT ID 17, 18 - NAMED PIPES
+# ==========================================
+
+17_18_pipe_event\include_metasploit.xml
+
+# ==========================================
+# EVENT ID 19, 20, 21 - WMI
+# ==========================================
+
+19_20_21_wmi_event\include_wmi_create.xml
+
+# ==========================================
+# EVENT ID 25 - PROCESS TAMPERING
+# ==========================================
+
+25_process_tampering\include_all.xml
+
+# ==========================================
+# EVENT ID 29 - EXECUTABLE DETECTION
+# ==========================================
+
+29_file_executable_detected\include_living_off_the_land.xml
+29_file_executable_detected\include_shells.xml

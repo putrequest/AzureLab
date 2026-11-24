@@ -1,0 +1,31 @@
+
+# ============================================================
+# EVENT ID 1 - PROCESS CREATION
+# ============================================================
+1_process_creation\exclude_windows_generic_processes.xml
+1_process_creation\exclude_windows_defender.xml
+
+# ============================================================
+# EVENT ID 2 - FILE CREATION TIME
+# ============================================================
+2_file_create_time\exclude_teams.xml
+
+# ============================================================
+# EVENT ID 3 - NETWORK CONNECTIONS
+# ============================================================
+3_network_connection_initiated\exclude_spotify.xml
+
+# ============================================================
+# EVENT ID 6 - DRIVER LOAD
+# ============================================================
+6_driver_loaded_into_kernel\exclude_intel_drivers.xml
+
+# ============================================================
+# EVENT ID 8 - REMOTE THREAD CREATION
+# ============================================================
+8_create_remote_thread\exclude_generic_windows_processes.xml
+
+# ============================================================
+# EVENT ID 10 - PROCESS ACCESS
+# ============================================================
+10_process_access\exclude_microsoft_defender_for_endpoint.xml
